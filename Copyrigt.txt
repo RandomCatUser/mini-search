@@ -1,0 +1,6 @@
+Copyrigt 
+
+This search engeene powered by google (url - www.google.com)
+Chat GPT help to code (module.openai)
+Powered By Html,css,javascript,bootstrap (code editor - VS code)
+Create By Wonder X

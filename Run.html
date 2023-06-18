@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Co Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      background-image: url('R (3).png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .search-box {
+      margin: 0 auto;
+      width: 400px;
+    }
+    
+    .search-box input[type=text] 
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    
+    
+    .search-box input[type=submit] {
+      background-color: #00ff08;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Co Search</h1>
+  <div class="search-box">
+    <form action="https://www.google.com/search" method="GET">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" name="q" placeholder="Search..." autofocus>
+        <div class="input-group-append">
+          <input type="submit" class="btn btn-primary" value="Search">
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
