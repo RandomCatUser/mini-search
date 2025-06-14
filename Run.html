@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Co Search</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
     body {
       text-align: center;
@@ -10,32 +12,59 @@
       font-family: Arial, sans-serif;
       background-image: url('R (3).png');
       background-size: cover;
+      background-position: center; /* Added for better background image positioning */
       background-repeat: no-repeat;
+      min-height: 100vh; /* Ensure body takes full viewport height for cover to work well */
+      display: flex; /* Use flexbox for centering content */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
     h1 {
-      font-size: 36px;
+      font-size: 3rem; /* Use rem units for better scalability */
       margin-bottom: 20px;
+      color: #333; /* Added a default color for better readability */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle text shadow */
     }
     
     .search-box {
       margin: 0 auto;
-      width: 400px;
+      width: 100%; /* Make it responsive */
+      max-width: 500px; /* Set a max-width for larger screens */
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
     }
     
-    .search-box input[type=text] 
+    /* Corrected selectors for input types */
+    .search-box input[type="text"] {
       width: 100%;
       padding: 12px;
-      font-size: 16px;
+      font-size: 1rem; /* Use rem units */
+      border: 1px solid #ced4da; /* Default Bootstrap border */
+      border-radius: .25rem; /* Match Bootstrap's border-radius */
+    }
     
-    
-    .search-box input[type=submit] {
-      background-color: #00ff08;
+    .search-box input[type="submit"] {
+      background-color: #00ff08; /* Your specified color */
       color: white;
       padding: 12px 20px;
       border: none;
-      font-size: 16px;
+      font-size: 1rem; /* Use rem units */
       cursor: pointer;
+      border-radius: .25rem; /* Match Bootstrap's border-radius */
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .search-box input[type="submit"]:hover {
+        background-color: #00e007; /* Slightly darker green on hover */
+    }
+
+    /* Override Bootstrap's button padding if needed for consistency with your custom styling */
+    .input-group-append .btn {
+        padding: 0.75rem 1.25rem; /* Match your input[type=submit] padding */
     }
   </style>
 </head>
@@ -44,7 +73,7 @@
   <div class="search-box">
     <form action="https://www.google.com/search" method="GET">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" name="q" placeholder="Search..." autofocus>
+        <input type="text" class="form-control" name="q" placeholder="Search..." autofocus aria-label="Search query">
         <div class="input-group-append">
           <input type="submit" class="btn btn-primary" value="Search">
         </div>
@@ -52,8 +81,8 @@
     </form>
   </div>
   
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
